@@ -21,11 +21,11 @@ fusion_params = scantool.FusionParameters(
 try:
     scanner = scantool()
     for f in listdir(getcwd()):
-        if f.endswith('.hp3dscanmesh'):
+        if f.endswith('.3dscanmesh'):
             mesh_path = abspath(f)
             scans = scanner.ImportSurface(mesh_path)
             fused = scanner.Fuse(scans, fusion_params)
-            scanner.ExportSurface(fused, mesh_path.replace('.hp3dscanmesh','_FusedScan.hp3dscanmesh'))
+            scanner.ExportSurface(fused, mesh_path.replace('.3dscanmesh','_FusedScan.3dscanmesh'))
 except scantool.HippoScanToolError as e:
     server.kill()
     print(f'Error: {e}\nScript ended.')
