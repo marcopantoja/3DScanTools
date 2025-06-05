@@ -1,0 +1,9 @@
+*.txt
+*.bat
+*.xml
+*.zip
+artifacts
+GUI-Buttons
+*Calib*
+tools
+LP*
